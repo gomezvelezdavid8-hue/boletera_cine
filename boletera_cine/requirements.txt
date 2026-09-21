@@ -1,0 +1,7 @@
+kivy==2.3.1
+qrcode==7.4.2
+pillow
+
+# Nota: en el Sprint 5 (dispositivos móviles) se agregará "buildozer"
+# para empaquetar la app como APK. No se incluye aún porque solo
+# funciona en Linux/WSL, no en Windows directamente.
