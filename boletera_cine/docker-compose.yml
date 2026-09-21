@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: boletera_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: boletera_cine
+      POSTGRES_USER: boletera_user
+      POSTGRES_PASSWORD: boletera_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - boletera_data:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d
+
+volumes:
+  boletera_data:
